@@ -7,6 +7,7 @@ ul,ol
 {
     list-style: none ;
 }
+
 body
 {
     background: #bfbfbf url('images/background.jpg') repeat-x; 
@@ -20,13 +21,79 @@ header h1
 {
     font-size: 40px;
     text-align: center;
-    font-family: 'Limelight', sans-serif;
+    font-family: 'Limelight', sans-serif; 
     color: #fff;
     text-transform: uppercase;
     text-shadow: 2px 2px 2px #000;       
 }
 
+section{
+    display: flex;
+    justify-content:center; 
+}  
 
+
+
+ul li {
+    overflow: hidden; 
+}
+
+li {
+    display: flex;
+}
+
+.bw {
+    background-image: url('images/bw-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 700px;
+    height: 500px;
+    display: none;
+}
+
+.color {
+    background-image: url('images/color-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 700px;
+    height: 500px;
+    display: none;
+}
+
+.desc {
+    position: relative;
+    width: 280px;
+    height: 500px;
+    background-color: #fff;
+    display: none;
+    align-items: center;
+}
+
+h3 {
+    background-color: #253cb6;
+    color: #fff;
+}
+
+#ulFooter{
+    display: inline-flex;
+
+} 
+
+.btn {
+    width: 100px;
+    font-family: 'Lobster', sans-serif; 
+    color: #fff;
+    justify-content: center;
+    border: 2px solid #253cb6;
+    border-radius: 5%;
+    background-color: #2e3033;
+    background-size: 300px 100px;
+    text-align: center; 
+    margin: 7px;
+    padding: 5px;
+}
 
 
 
