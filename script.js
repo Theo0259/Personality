@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function() {
     // Sélectionne tous les éléments li qui ne sont pas des boutons
     const liElements = document.querySelectorAll('li:not(.btn)');
-    let dernierLiClique = null; // Garde une référence du dernier li cliqué
-    let dernierColorDiv = null; // Garde une référence de la dernière div de couleur
+    let lastLi = null; // Garde une référence du dernier li cliqué
+    let lastColorDiv = null; // Garde une référence de la dernière div de couleur
   
     // Parcours tous les liElements
     liElements.forEach(function(liElement) {
@@ -10,12 +10,12 @@ document.addEventListener("DOMContentLoaded", function() {
   
         // Ajoute un écouteur d'événement de clic à chaque li
         liElement.addEventListener('click', function() {
-            if (dernierLiClique !== liElement) { // Vérifie si le li actuel est différent du dernier li cliqué
-                if (dernierLiClique !== null && dernierColorDiv !== null) {
+            if (lastLi !== liElement) { // Vérifie si le li actuel est différent du dernier li cliqué
+                if (lastLi !== null && lastColorDiv !== null) {
                     // Animation de transition pour le dernier li cliqué et la dernière div de couleur
-                    dernierLiClique.style.transition = 'width 1s ease';
-                    dernierLiClique.style.width = '140px';
-                    dernierColorDiv.style.left = '140px';
+                    lastLi.style.transition = 'width 1s ease';
+                    lastLi.style.width = '140px';
+                    lastColorDiv.style.left = '140px';
                 }
   
                 // Animation de transition pour le li actuel et sa div de couleur
@@ -23,8 +23,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 liElement.style.width = '420px';
                 colorDiv.style.left = '0';
   
-                dernierLiClique = liElement; // Met à jour la référence du dernier li cliqué
-                dernierColorDiv = colorDiv; // Met à jour la référence de la dernière div de couleur
+                lastLi = liElement; // Met à jour la référence du dernier li cliqué
+                lastColorDiv = colorDiv; // Met à jour la référence de la dernière div de couleur
             }
         });
     });
